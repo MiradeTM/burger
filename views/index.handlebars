@@ -1,3 +1,7 @@
+<header>
+   
+</header>
+
 {{#if burgers}}
 <h1>Burgers of The Day</h1>
 
@@ -8,7 +12,7 @@
 
             {{#each burgers}}
             {{#unless devoured}}
-            {{burger-block devour=true}}
+            {{>burger-block devour=true}}
             {{/unless}}
             {{/each}}
 
@@ -19,7 +23,7 @@
         <ul class="item2">
             {{#each burgers}}
             {{#if devoured}}
-            {{>burger-block devour=false}}
+            {{> burger-block devour=false}}
             {{/if}}
             {{/each}}
         </ul>
@@ -33,10 +37,14 @@
     <form class="create-form">
 
         <div class="form-group">
-            <input type="text" id="ca" name="name" placeholder="Burger Name">
+            <input type="text" id="burg" name="name" placeholder="Burger Name">
         </div>
         <div class="addBtn">
         <button type="submit" class="addABurger">Add Burger</button>
         </div>
     </form>
 </section>
+
+<footer>
+  
+</footer>
